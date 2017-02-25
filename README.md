@@ -1,8 +1,11 @@
 # DocTien
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/doc_tien`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Xin chào các bạn, tiếng Việt rất đẹp và theo một câu nói khá hay đó là những vấn đề của người Việt chỉ người Việt mới có thể giải quyết mà thôi.
+Tôi là 1 lập trình viên Rails đang gặp 1 xíu vấn đề trong việc thực hiện tính năng "Số tiền bằng chữ: "
+Qua quá trình tìm kiếm chưa thấy có một cách nào có sẵn hỗ trợ việc này.
+Đó là lý do tôi viết thư viện này.
+Giải quyết những việc như:
+Nhập vào: 1453121401 -> Sẽ ra kết quả là: Một tỉ bốn trăm năm mươi ba triệu một trăm hai mươi mốt nghìn bốn trăm lẻ một đồng.
 
 ## Installation
 
@@ -22,7 +25,31 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Rất đơn giản:
+  ```ruby
+  DocTien.now(35000)
+  => "Ba mươi lăm nghìn  đồng"
+  ```
+  ```ruby
+  DocTien.now(1100000000, 'VND')
+  => "Một tỉ một trăm triệu VND"
+  ```
+  ```ruby
+  DocTien.now("543000")
+  => "Năm trăm bốn mươi ba nghìn  đồng"
+  ```
+  ```ruby
+  DocTien.now(1453121407)
+  => "Một tỉ bốn trăm năm mươi ba triệu một trăm hai mươi mốt nghìn bốn trăm lẻ bảy đồng"
+  ```
+  ```ruby
+   DocTien.now(1200000)
+  => "Một triệu hai trăm nghìn  đồng"
+  ```
+  ```ruby
+  DocTien.now(100000000)
+  => "Một trăm triệu đồng"
+  ```
 
 ## Development
 

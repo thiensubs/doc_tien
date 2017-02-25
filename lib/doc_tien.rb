@@ -1,4 +1,4 @@
-require "doc_tien/version"
+# require "doc_tien/version"
 
 module DocTien
   A = {0=> '',1 =>'một', 2=>'hai', 3=>'ba', 4=>'bốn', 5=>'năm', 6=>'sáu', 7=>'bảy', 8=>'tám', 9=>'chín'}
@@ -21,7 +21,7 @@ module DocTien
                 'năm năm' => 'năm lăm','sáu năm' => 'sáu lăm',
                 'bảy năm' => 'bảy lăm', 'tám năm' => 'tám lăm', 'chín năm' => 'chín lăm', 'mươi năm' => 'mươi lăm'  }
 
-  def self.now(s)
+  def self.now(s, char_currency='đồng')
     s = s.to_s
      # Split every 3 number to 1 block
     s1 = s.reverse.scan(/.{1,3}/)
@@ -36,14 +36,17 @@ module DocTien
     end
     words_string = num_to_words(words_first, num_of_blocks)
     words_string = replace_with_special_word(words_string)
-    return words_string.lstrip.chop.capitalize
+    return words_string.lstrip.chop.capitalize+" "+char_currency
   end
 
   def self.num_to_words(words_first, num_of_blocks)
     s = ""
     for i in 0...num_of_blocks
-      s = s + words_first[i] + " "+ D[num_of_blocks-(i+1)]
-      s = s +" "
+      if words_first[i]!=''
+        s = s + words_first[i] + " "+ D[num_of_blocks-(i+1)]
+        s = s +" "
+      end
+
     end
     return s
   end
@@ -60,7 +63,7 @@ module DocTien
       #So hang tram
       tram = number/100
       if tram>0
-        s =  s+ A[tram] +" "+ E.first
+          s =  s+ A[tram] +" "+ E.first
       end
       num_temp_mod10 = num_temp_mod100%10
       if (num_temp_mod10==0)
