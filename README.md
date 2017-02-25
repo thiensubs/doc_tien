@@ -2,6 +2,8 @@
 
 Xin chào các bạn, tiếng Việt rất đẹp và theo một câu nói khá hay đó là những vấn đề của người Việt chỉ người Việt mới có thể giải quyết mà thôi.
 
+En: This gem support for number to word (with currency) in Vietnamese.
+
 Tôi là 1 lập trình viên Rails đang gặp 1 xíu vấn đề trong việc thực hiện tính năng "Số tiền bằng chữ: "
 Qua quá trình tìm kiếm chưa thấy có một cách nào có sẵn hỗ trợ việc này.
 
