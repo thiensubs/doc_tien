@@ -1,10 +1,14 @@
 # DocTien
 
 Xin chào các bạn, tiếng Việt rất đẹp và theo một câu nói khá hay đó là những vấn đề của người Việt chỉ người Việt mới có thể giải quyết mà thôi.
+
 Tôi là 1 lập trình viên Rails đang gặp 1 xíu vấn đề trong việc thực hiện tính năng "Số tiền bằng chữ: "
 Qua quá trình tìm kiếm chưa thấy có một cách nào có sẵn hỗ trợ việc này.
+
 Đó là lý do tôi viết thư viện này.
+
 Giải quyết những việc như:
+
 Nhập vào: 1453121401 -> Sẽ ra kết quả là: Một tỉ bốn trăm năm mươi ba triệu một trăm hai mươi mốt nghìn bốn trăm lẻ một đồng.
 
 ## Installation
