@@ -1,4 +1,4 @@
-# require "doc_tien/version"
+require "doc_tien/version"
 
 module DocTien
   A = {0=> '',1 =>'một', 2=>'hai', 3=>'ba', 4=>'bốn', 5=>'năm', 6=>'sáu', 7=>'bảy', 8=>'tám', 9=>'chín'}
